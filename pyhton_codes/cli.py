@@ -1,5 +1,5 @@
 import time
-import functions
+from pyhton_codes import functions
 
 now = time.strftime("%Y-%m-%d %H:%M:%S")
 print("It is:", now)
@@ -14,7 +14,7 @@ while True:
             file.write(todo)
 
     elif user_action.startswith("show"):
-        todos=functions.get_todos()
+        todos= functions.get_todos()
         for index, todo in enumerate(todos):
             item = todo.strip("\n")
             row = f"{index + 1} - {item}"
@@ -22,7 +22,7 @@ while True:
 
     elif user_action.startswith("edit"):
         try:
-            todos=functions.get_todos()
+            todos= functions.get_todos()
             number = int(user_action[5:]) - 1
             if 0 <= number < len(todos):
                 new_todo = input("Enter a new todo: ") + "\n"
@@ -36,7 +36,7 @@ while True:
 
     elif user_action.startswith("complete"):
         try:
-            todos=functions.get_todos()
+            todos= functions.get_todos()
             number = int(user_action[9:]) - 1
             if 0 <= number < len(todos):
                 removed_todo = todos[number].strip("\n")
