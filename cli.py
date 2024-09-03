@@ -1,5 +1,5 @@
 import time
-from pyhton_codes import functions
+import functions
 
 now = time.strftime("%Y-%m-%d %H:%M:%S")
 print("It is:", now)
