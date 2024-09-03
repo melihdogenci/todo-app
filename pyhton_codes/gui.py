@@ -3,7 +3,7 @@ import FreeSimpleGUI as sg
 import time
 import os
 
-# creates "todos.txt" for the first time.
+# creates "todos.txt" for the first time
 if not os.path.exists("todos.txt"):
     with open("todos.txt", "w") as f:
         pass
